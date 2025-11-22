@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valerie Smith | Copywriter Who Gets Results</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .glitch {
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            animation: glitch 2s infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes glitch {
+            0%, 100% { text-shadow: 2px 2px 0 #fff; }
+            25% { text-shadow: -2px -2px 0 #ff00de, 2px 2px 0 #00ffff; }
+            50% { text-shadow: 2px -2px 0 #ff00de, -2px 2px 0 #00ffff; }
+            75% { text-shadow: -2px 2px 0 #00ffff, 2px -2px 0 #ff00de; }
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            background: #fff;
+            color: #667eea;
+            padding: 18px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 40px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin: 80px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #fff, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 3rem;
+            font-weight: 900;
+            text-align: center;
+            margin: 80px 0 50px;
+            background: linear-gradient(45deg, #fff, #ffd700, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Services Grid */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .service-card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            background: rgba(255,255,255,0.2);
+        }
+
+        .service-emoji {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .service-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .service-desc {
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .portfolio-item {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .portfolio-header {
+            background: rgba(255,255,255,0.25);
+            padding: 30px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .portfolio-body {
+            padding: 30px;
+        }
+
+        .portfolio-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.25);
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9rem;
+        }
+
+        .view-button {
+            background: #fff;
+            color: #667eea;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .view-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Testimonial */
+        .testimonial-slider {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+            max-width: 800px;
+            margin: 60px auto;
+        }
+
+        .testimonial-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-author {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .testimonial-role {
+            opacity: 0.85;
+            margin-top: 5px;
+            font-size: 1.1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 80px 40px;
+            text-align: center;
+            margin: 80px 0;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .contact-text {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            background: #fff;
+            color: #667eea;
+            padding: 18px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            opacity: 0.85;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .glitch { font-size: 2.5rem; }
+            .subtitle { font-size: 1.2rem; }
+            .section-title { font-size: 2rem; }
+            .cta-button { padding: 15px 35px; font-size: 1rem; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .services { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: 1fr; padding: 40px 20px; }
+            .testimonial-slider { padding: 40px 20px; }
+            .contact { padding: 60px 20px; }
+        }
+
+        /* Loading Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="glitch">VALERIE SMITH</h1>
+            <p class="subtitle">I write copy that makes people click "Buy Now" 💸</p>
+            <p class="subtitle">Not just pretty words. REVENUE-GENERATING words.</p>
+            <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                Let's Make Money Together →
+            </button>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats fade-in">
+            <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">85%</div>
+                <div class="stat-label">Client Retention</div>
+            </div>
+        </section>
+
+        <!-- What I Do -->
+        <h2 class="section-title">What I Actually Do</h2>
+        <div class="services">
+            <div class="service-card fade-in">
+                <div class="service-emoji">🎬</div>
+                <div class="service-title">VSL Scripts</div>
+                <div class="service-desc">
+                    30-90 minute video sales letters that keep people watching and buying. 
+                    Scripts that feel like a conversation, not a sales pitch.
+                </div>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-emoji">📧</div>
+                <div class="service-title">Email Sequences</div>
+                <div class="service-desc">
+                    Launch campaigns, nurture flows, re-engagement series. 
+                    Emails people actually open, read, and click through.
+                </div>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-emoji">🚀</div>
+                <div class="service-title">Sales Pages</div>
+                <div class="service-desc">
+                    Long-form landing pages that tell your story and convert visitors. 
+                    Psychology + strategy + words = sales.
+                </div>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-emoji">🎯</div>
+                <div class="service-title">Ad Copy</div>
+                <div class="service-desc">
+                    Facebook, Google, LinkedIn, YouTube. 
+                    Short copy that stops the scroll and drives clicks.
+                </div>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-emoji">🔥</div>
+                <div class="service-title">Sales Funnels</div>
+                <div class="service-desc">
+                    Complete customer journeys from stranger to buyer.
+                    Strategy, copy, and optimization.
+                </div>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-emoji">💡</div>
+                <div class="service-title">Strategy Sessions</div>
+                <div class="service-desc">
+                    Not sure what you need? Let's talk strategy first. 
+                    Sometimes the problem isn't the copy—it's the approach.
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio -->
+        <h2 class="section-title">My Work (The Good Stuff)</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item fade-in">
+                <div class="portfolio-header">🎬 VSL Script - Fintech App</div>
+                <div class="portfolio-body">
+                    <p>45-minute video sales letter for personal finance app. Built to handle objections and drive conversions.</p>
+                    <div style="margin-top: 20px;">
+                        <span class="portfolio-tag">Psychology</span>
+                        <span class="portfolio-tag">Storytelling</span>
+                        <span class="portfolio-tag">Conversion</span>
+                    </div>
+                    <button class="view-button" onclick="window.open('https://docs.google.com/document/d/YOUR_LINK_HERE', '_blank')">
+                        View Sample →
+                    </button>
+                </div>
+            </div>
+            <div class="portfolio-item fade-in">
+                <div class="portfolio-header">📧 Email Launch Sequence</div>
+                <div class="portfolio-body">
+                    <p>5-email product launch campaign. From teaser to close. Designed to convert warm lists.</p>
+                    <div style="margin-top: 20px;">
+                        <span class="portfolio-tag">Email Marketing</span>
+                        <span class="portfolio-tag">Launch Strategy</span>
+                        <span class="portfolio-tag">Urgency</span>
+                    </div>
+                    <button class="view-button" onclick="window.open('https://docs.google.com/document/d/YOUR_LINK_HERE', '_blank')">
+                        View Sample →
+                    </button>
+                </div>
+            </div>
+            <div class="portfolio-item fade-in">
+                <div class="portfolio-header">🚀 Sales Page - B2B Services</div>
+                <div class="portfolio-body">
+                    <p>Long-form sales page for consulting offer. Problem-solution framework with social proof.</p>
+                    <div style="margin-top: 20px;">
+                        <span class="portfolio-tag">B2B Copy</span>
+                        <span class="portfolio-tag">Long-form</span>
+                        <span class="portfolio-tag">High-ticket</span>
+                    </div>
+                    <button class="view-button" onclick="window.open('https://docs.google.com/document/d/YOUR_LINK_HERE', '_blank')">
+                        View Sample →
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial -->
+        <h2 class="section-title">What People Say</h2>
+        <div class="testimonial-slider fade-in">
+            <div class="testimonial-text">
+                "Valerie doesn't just write copy—she understands business. 
+                Her work generated more results in 3 weeks than our previous 6 months combined."
+            </div>
+            <div class="testimonial-author">Marcus Chen</div>
+            <div class="testimonial-role">SaaS Founder</div>
+        </div>
+
+        <!-- Contact -->
+        <section class="contact fade-in" id="contact">
+            <h2 class="contact-title">Ready to Make Some Money?</h2>
+            <p class="contact-text">
+                Whether you need a full campaign or one killer sales page, let's talk.
+                <br><br>
+                I'm available for full-time, contract, or project-based work.
+            </p>
+            <div class="contact-buttons">
+                <a href="mailto:smithvaleriereal@gmail.com" class="contact-btn">📧 Email Me</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-btn">💼 LinkedIn</a>
+                <a href="https://wa.me/YOUR_NUMBER" target="_blank" class="contact-btn">💬 WhatsApp</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p style="font-size: 1.1rem; font-weight: 600;">© 2024 Valerie Smith | Copywriter Who Gets Results</p>
+            <p style="margin-top: 15px; opacity: 0.7;">Built with ❤️ and caffeine ☕</p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scroll animation trigger
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.service-card, .portfolio-item, .stats, .testimonial-slider, .contact').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+              </html>
